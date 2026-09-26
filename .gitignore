@@ -1,0 +1,8 @@
+# Local build artifacts
+*.exe
+
+# Editor and operating-system files
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
