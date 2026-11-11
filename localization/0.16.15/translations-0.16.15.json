@@ -1,0 +1,487 @@
+{
+  "jsons/features/PlantFeatures.json#/PLANTS/233/NAME": {
+    "en": "Aqua Vine",
+    "zh": "水生藤蔓",
+    "ru": "Водная лоза"
+  },
+  "jsons/features/PlantFeatures.json#/PLANTS/234/NAME": {
+    "en": "Bud'uh Boom",
+    "zh": "爆浆玉露",
+    "ru": "Маслобум"
+  },
+  "jsons/lang/lang.json#/SettingLyrics/MusicPacks": {
+    "en": "Music Packs",
+    "zh": "音乐包",
+    "ru": "Музыкальные наборы"
+  },
+  "jsons/lang/lang.json#/LoadingTips/51": {
+    "en": "Press Shift + F8 to make a screenshot!",
+    "zh": "按下 Shift + F8 截图",
+    "ru": "Нажмите Shift + F8, чтобы сделать снимок экрана!"
+  },
+  "jsons/levels/cowboy18_1.json#/objects/3/objdata/CardDecks/Recommended/1/Name": {
+    "en": "Lightning Chains",
+    "zh": "闪电链",
+    "ru": "Цепи молний"
+  },
+  "jsons/levels/cowboy24_1.json#/objects/3/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Give'm a Shot",
+    "zh": "主角登场",
+    "ru": "Дайте им жару"
+  },
+  "jsons/levels/future20.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future20.json#/objects/1/objdata/CardDecks/Challenging/1/Name": {
+    "en": "Peas' Vengence",
+    "zh": "豌豆的复仇",
+    "ru": "Месть гороха"
+  },
+  "jsons/levels/future20.json#/objects/1/objdata/CardDecks/Challenging/2/Name": {
+    "en": "War Sustains War",
+    "zh": "以战养战",
+    "ru": "Война кормит войну"
+  },
+  "jsons/levels/future20.json#/objects/1/objdata/CardDecks/Challenging/4/Name": {
+    "en": "Continuous Healing",
+    "zh": "持续治疗",
+    "ru": "Непрерывное лечение"
+  },
+  "jsons/levels/kongfu11.json#/objects/3/objdata/CardDecks/Challenging/1/Name": {
+    "en": "Give'm a Shot",
+    "zh": "主角登场",
+    "ru": "Дайте им жару"
+  },
+  "jsons/levels/kongfu2.json#/objects/3/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Give'm a Shot",
+    "zh": "主角登场",
+    "ru": "Дайте им жару"
+  },
+  "jsons/levels/pirate4.json#/objects/2/objdata/CardDecks/Challenging/1/Name": {
+    "en": "Give'm a Shot",
+    "zh": "主角登场",
+    "ru": "Дайте им жару"
+  },
+  "jsons/levels/reinforce7.json#/objects/2/objdata/CardDecks/Recommended/0/Name": {
+    "en": "Defensive Wall",
+    "zh": "城墙",
+    "ru": "Оборонительная стена"
+  },
+  "jsons/objects/NarrativeList.json#/objects/0/objdata/Flow/2/Lines": {
+    "en": "Electric Mega Gatling Pea is our last hope.",
+    "zh": "电能超级机枪射手是我们最后的希望。",
+    "ru": "Электрический Мега-гатлинг-горох — наша последняя надежда."
+  },
+  "jsons/objects/PlantAlmanac.json#/objects/20/objdata/Introduction": {
+    "en": "Aqua Vines are amphibious vines that can support both ground and water type plants.",
+    "zh": "水生藤蔓是一种两栖的藤蔓，可以容纳陆生或水生植物。",
+    "ru": "Водная лоза — земноводная лоза, на которой можно размещать и наземные, и водные растения."
+  },
+  "jsons/objects/PlantAlmanac.json#/objects/20/objdata/Special/0/DESCRIPTION": {
+    "en": "covered amphibious plants like Seashooters will act like they are in water",
+    "zh": "被包裹的植物，如海豌豆，会发挥水中的能力",
+    "ru": "размещённые внутри земноводные растения, например Морской горохострел, используют свои водные способности"
+  },
+  "jsons/objects/PlantAlmanac.json#/objects/20/objdata/Chat": {
+    "en": "Once during its regular morning jog, Aqua Vine tied a taco to the end of a string in the hopes of getting Dave to exercise. Who knew Dave could be so fast?",
+    "zh": "在一次晨练当中，水生藤蔓用绳子吊着一块玉米卷，希望以这种方式让戴夫锻炼。但谁想得到戴夫可以跑得这么快？",
+    "ru": "Однажды на утренней пробежке Водная лоза привязала тако к верёвочке, надеясь приобщить Дейва к спорту. Кто бы мог подумать, что Дейв умеет так быстро бегать?"
+  },
+  "jsons/objects/PlantAlmanac.json#/objects/20/objdata/BriefIntroduction": {
+    "en": "Supports ground and water type plants",
+    "zh": "容纳陆生或水生植物",
+    "ru": "Вмещает наземные и водные растения"
+  },
+  "jsons/objects/PlantAlmanac.json#/objects/85/objdata/Introduction": {
+    "en": "Bud'uh Booms blow up and butter all zombies in an area, throwing some butter on board.",
+    "zh": "爆浆玉露爆炸并用黄油糊住范围内的僵尸，同时向全屏投掷一些黄油。",
+    "ru": "Маслобум взрывается и облепляет маслом всех зомби поблизости, а также разбрасывает немного масла по всей лужайке."
+  },
+  "jsons/objects/PlantAlmanac.json#/objects/85/objdata/Chat": {
+    "en": "Bud'uh Boom's buttery obsession always had him on a hair trigger, but when Zomboss served up \"You-can't-believe-it's-not-butter!\" - it was poppin' pandemonium on the lawn! Now, he's ready to butter up zombies and explode with boiling, buttery, BOOM!",
+    "zh": "爆浆玉露对黄油的执念总让他变得易爆，但当僵尸博士端出“不可能不是黄油”的东西后——草坪上顿时炸开了锅！现在，他准备给僵尸抹上黄油，再轰然炸裂！",
+    "ru": "Из-за своей страсти к маслу Маслобум всегда был готов вспыхнуть. Но когда Зомбосс подал ему «Не поверишь, это не масло!», на лужайке разразился настоящий взрывной переполох! Теперь он готов умаслить зомби и устроить кипящий, масляный БУМ!"
+  },
+  "jsons/objects/PlantAlmanac.json#/objects/85/objdata/BriefIntroduction": {
+    "en": "Blows up and butters zombies",
+    "zh": "爆炸并用黄油糊住范围内僵尸",
+    "ru": "Взрывается и облепляет зомби маслом"
+  },
+  "jsons/levels/future1.json#/objects/2/objdata/CardDecks/Recommended/0/Name": {
+    "en": "Modern Trend",
+    "zh": "近代潮流",
+    "ru": "Современные веяния"
+  },
+  "jsons/levels/future1.json#/objects/2/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future1.json#/objects/2/objdata/CardDecks/Challenging/0/Name": {
+    "en": "P-P Combo",
+    "zh": "P-P 组合",
+    "ru": "Комбо P-P"
+  },
+  "jsons/levels/future1.json#/objects/2/objdata/CardDecks/Challenging/4/Name": {
+    "en": "Hot and Cold",
+    "zh": "冷热交替",
+    "ru": "Жар и холод"
+  },
+  "jsons/levels/future10.json#/objects/1/objdata/CardDecks/Recommended/0/Name": {
+    "en": "Give'm a Shot",
+    "zh": "主角登场",
+    "ru": "Дайте им жару"
+  },
+  "jsons/levels/future10.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future10.json#/objects/1/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Hungry Mechs",
+    "zh": "贪吃的机甲",
+    "ru": "Прожорливые мехи"
+  },
+  "jsons/levels/future10.json#/objects/1/objdata/CardDecks/Challenging/2/Name": {
+    "en": "Focus Hotspot",
+    "zh": "聚焦热点",
+    "ru": "Горячая точка"
+  },
+  "jsons/levels/future10.json#/objects/1/objdata/CardDecks/Challenging/3/Name": {
+    "en": "Dizzy",
+    "zh": "头晕目眩",
+    "ru": "Головокружение"
+  },
+  "jsons/levels/future11.json#/objects/2/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future12.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future13.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future13.json#/objects/1/objdata/CardDecks/Challenging/2/Name": {
+    "en": "Beat Around the Bush",
+    "zh": "旁敲侧击",
+    "ru": "Обходной манёвр"
+  },
+  "jsons/levels/future13.json#/objects/1/objdata/CardDecks/Challenging/3/Name": {
+    "en": "Few Against Many",
+    "zh": "以少胜多",
+    "ru": "Меньшинство против большинства"
+  },
+  "jsons/levels/future14.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future14.json#/objects/1/objdata/CardDecks/Challenging/2/Name": {
+    "en": "Beat Around the Bush",
+    "zh": "旁敲侧击",
+    "ru": "Обходной манёвр"
+  },
+  "jsons/levels/future15.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future15.json#/objects/1/objdata/CardDecks/Challenging/2/Name": {
+    "en": "Persuasion",
+    "zh": "感化",
+    "ru": "Сила убеждения"
+  },
+  "jsons/levels/future18.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future18.json#/objects/1/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Give'm a Shot",
+    "zh": "主角登场",
+    "ru": "Дайте им жару"
+  },
+  "jsons/levels/future19.json#/objects/2/objdata/CardDecks/Recommended/1/Name": {
+    "en": "Lightning Chains",
+    "zh": "闪电链",
+    "ru": "Цепи молний"
+  },
+  "jsons/levels/future19.json#/objects/2/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future19.json#/objects/2/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Dangerous Edge",
+    "zh": "危险边缘",
+    "ru": "На краю опасности"
+  },
+  "jsons/levels/future19.json#/objects/2/objdata/CardDecks/Challenging/2/Name": {
+    "en": "Solar Concentration",
+    "zh": "光能聚焦",
+    "ru": "Солнечная концентрация"
+  },
+  "jsons/levels/future2.json#/objects/1/objdata/CardDecks/Recommended/0/Name": {
+    "en": "Give'm a Shot",
+    "zh": "主角登场",
+    "ru": "Дайте им жару"
+  },
+  "jsons/levels/future2.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future2.json#/objects/1/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Fists to Shields",
+    "zh": "拳拳到盾",
+    "ru": "Кулаками по щитам"
+  },
+  "jsons/levels/future2.json#/objects/1/objdata/CardDecks/Challenging/2/Name": {
+    "en": "Endless Supply",
+    "zh": "源源不断",
+    "ru": "Бесконечные запасы"
+  },
+  "jsons/levels/future2.json#/objects/1/objdata/CardDecks/Challenging/3/Name": {
+    "en": "Mech Nemesis",
+    "zh": "机甲克星",
+    "ru": "Гроза мехов"
+  },
+  "jsons/levels/future21.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future22.json#/objects/3/objdata/CardDecks/Recommended/0/Name": {
+    "en": "Minefield",
+    "zh": "地雷阵",
+    "ru": "Минное поле"
+  },
+  "jsons/levels/future22.json#/objects/3/objdata/CardDecks/Recommended/1/Name": {
+    "en": "Lightning Chains",
+    "zh": "闪电链",
+    "ru": "Цепи молний"
+  },
+  "jsons/levels/future22.json#/objects/3/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future23.json#/objects/4/objdata/CardDecks/Recommended/1/Name": {
+    "en": "Lightning Chains",
+    "zh": "闪电链",
+    "ru": "Цепи молний"
+  },
+  "jsons/levels/future23.json#/objects/4/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future23.json#/objects/4/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Easy Pissy",
+    "zh": "易如反掌",
+    "ru": "Проще простого"
+  },
+  "jsons/levels/future23.json#/objects/4/objdata/CardDecks/Challenging/1/Name": {
+    "en": "Peas' Vengence",
+    "zh": "豌豆的复仇",
+    "ru": "Месть гороха"
+  },
+  "jsons/levels/future24.json#/objects/2/objdata/CardDecks/Recommended/1/Name": {
+    "en": "Lightning Chains",
+    "zh": "闪电链",
+    "ru": "Цепи молний"
+  },
+  "jsons/levels/future24.json#/objects/2/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future24.json#/objects/2/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Fruit Store",
+    "zh": "水果摊",
+    "ru": "Фруктовая лавка"
+  },
+  "jsons/levels/future24.json#/objects/2/objdata/CardDecks/Challenging/2/Name": {
+    "en": "Laser Eye",
+    "zh": "电眼逼人",
+    "ru": "Лазерный взгляд"
+  },
+  "jsons/levels/future26.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future27.json#/objects/4/objdata/CardDecks/Recommended/2/Name": {
+    "en": "Watch the Bottom Line",
+    "zh": "当心底线",
+    "ru": "Берегите последний рубеж"
+  },
+  "jsons/levels/future29.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future29.json#/objects/1/objdata/CardDecks/Challenging/1/Name": {
+    "en": "Imprecise Strike",
+    "zh": "不精准打击",
+    "ru": "Неточный удар"
+  },
+  "jsons/levels/future3.json#/objects/1/objdata/CardDecks/Recommended/0/Name": {
+    "en": "Laser Eyes",
+    "zh": "电眼逼人",
+    "ru": "Лазерный взгляд"
+  },
+  "jsons/levels/future3.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future3.json#/objects/1/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Defensive Wall",
+    "zh": "城墙",
+    "ru": "Оборонительная стена"
+  },
+  "jsons/levels/future3.json#/objects/1/objdata/CardDecks/Challenging/1/Name": {
+    "en": "Dilemma",
+    "zh": "进退维谷",
+    "ru": "Дилемма"
+  },
+  "jsons/levels/future30.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future32.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future32.json#/objects/1/objdata/CardDecks/Challenging/2/Name": {
+    "en": "Ups and Downs",
+    "zh": "起起落落",
+    "ru": "Взлёты и падения"
+  },
+  "jsons/levels/future33.json#/objects/3/objdata/CardDecks/Recommended/1/Name": {
+    "en": "Defensive Wall",
+    "zh": "城墙",
+    "ru": "Оборонительная стена"
+  },
+  "jsons/levels/future33.json#/objects/3/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future33.json#/objects/3/objdata/CardDecks/Challenging/1/Name": {
+    "en": "Thrilling",
+    "zh": "惊心动魄",
+    "ru": "Захватывающее зрелище"
+  },
+  "jsons/levels/future34.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future34.json#/objects/1/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Fruit Ninja",
+    "zh": "水果忍者",
+    "ru": "Фруктовый ниндзя"
+  },
+  "jsons/levels/future4.json#/objects/2/objdata/CardDecks/Recommended/0/Name": {
+    "en": "Give'm a Shot",
+    "zh": "主角登场",
+    "ru": "Дайте им жару"
+  },
+  "jsons/levels/future4.json#/objects/2/objdata/CardDecks/Recommended/1/Name": {
+    "en": "Lightning Chains",
+    "zh": "闪电链",
+    "ru": "Цепи молний"
+  },
+  "jsons/levels/future4.json#/objects/2/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future4.json#/objects/2/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Three Musketeers",
+    "zh": "三个火枪手",
+    "ru": "Три мушкетёра"
+  },
+  "jsons/levels/future4.json#/objects/2/objdata/CardDecks/Challenging/2/Name": {
+    "en": "High-energy Weapon",
+    "zh": "高能武器",
+    "ru": "Энергетическое оружие"
+  },
+  "jsons/levels/future5.json#/objects/1/objdata/CardDecks/Recommended/0/Name": {
+    "en": "Laser Eyes",
+    "zh": "电眼逼人",
+    "ru": "Лазерный взгляд"
+  },
+  "jsons/levels/future5.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future5.json#/objects/1/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Demolition Specialist",
+    "zh": "爆破专家",
+    "ru": "Мастер подрывного дела"
+  },
+  "jsons/levels/future5.json#/objects/1/objdata/CardDecks/Challenging/3/Name": {
+    "en": "War Sustains War",
+    "zh": "以战养战",
+    "ru": "Война кормит войну"
+  },
+  "jsons/levels/future7.json#/objects/1/objdata/CardDecks/Recommended/0/Name": {
+    "en": "Give'm a Shot",
+    "zh": "主角登场",
+    "ru": "Дайте им жару"
+  },
+  "jsons/levels/future7.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future7.json#/objects/1/objdata/CardDecks/Challenging/1/Name": {
+    "en": "High-energy Weapon",
+    "zh": "高能武器",
+    "ru": "Энергетическое оружие"
+  },
+  "jsons/levels/future7.json#/objects/1/objdata/CardDecks/Challenging/2/Name": {
+    "en": "Fully Armed",
+    "zh": "全副武装",
+    "ru": "Во всеоружии"
+  },
+  "jsons/levels/future9.json#/objects/1/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Done in\nOne Shot",
+    "zh": "一步到位",
+    "ru": "Одним\nвыстрелом"
+  },
+  "jsons/levels/future9.json#/objects/1/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Fists to Shields",
+    "zh": "拳拳到盾",
+    "ru": "Кулаками по щитам"
+  },
+  "jsons/levels/future9.json#/objects/1/objdata/CardDecks/Challenging/1/Name": {
+    "en": "Overgrowth",
+    "zh": "过分生长",
+    "ru": "Буйный рост"
+  },
+  "jsons/levels/future9.json#/objects/1/objdata/CardDecks/Challenging/2/Name": {
+    "en": "Move Freely",
+    "zh": "移动自如",
+    "ru": "Свобода движения"
+  },
+  "jsons/levels/future9.json#/objects/1/objdata/CardDecks/Challenging/3/Name": {
+    "en": "Ghost Burst",
+    "zh": "幽灵爆发",
+    "ru": "Призрачный взрыв"
+  }
+}

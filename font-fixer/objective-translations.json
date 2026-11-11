@@ -1,0 +1,209 @@
+{
+  "templates": [
+    {
+      "en": "<COUNT> Left",
+      "ru": "Осталось: <COUNT>"
+    },
+    {
+      "en": "Never have more than <PLANTCOUNT> plant<S>",
+      "ru": "Одновременно не более <PLANTCOUNT> растений"
+    },
+    {
+      "en": "Survive and protect the endangered plants",
+      "ru": "Выживите и защитите растения под угрозой"
+    },
+    {
+      "en": "Do not lose more than <PLANTCOUNT> plant<S>",
+      "ru": "Не потеряйте больше <PLANTCOUNT> растений"
+    },
+    {
+      "en": "Plan your defence and defeat the zombies",
+      "ru": "Спланируйте оборону и победите зомби"
+    },
+    {
+      "en": "Spend no more than <SUNCOUNT> sun",
+      "ru": "Потратьте не больше <SUNCOUNT> солнца"
+    },
+    {
+      "en": "Produce at least <SUNCOUNT> sun",
+      "ru": "Произведите не меньше <SUNCOUNT> солнца"
+    },
+    {
+      "en": "Do not spend any sun for <TIME> second<S>",
+      "ru": "Не тратьте солнце в течение <TIME> секунд"
+    },
+    {
+      "en": "Kill <ZOMBIECOUNT> zombie<ZS> in <TIME> second<TS>",
+      "ru": "Уничтожьте <ZOMBIECOUNT> зомби за <TIME> секунд"
+    },
+    {
+      "en": "Survive the zombie attack",
+      "ru": "Переживите атаку зомби"
+    },
+    {
+      "en": "Survive a massive attack in the <WORLDNAME>",
+      "ru": "Переживите массированную атаку в мире «<WORLDNAME>»"
+    },
+    {
+      "en": "Survive with the only plant you've got",
+      "ru": "Выживите с единственным доступным растением"
+    },
+    {
+      "en": "Survive without any lawn mowers",
+      "ru": "Выживите без газонокосилок"
+    },
+    {
+      "en": "Survive without triggering the barrels of dynamite",
+      "ru": "Выживите, не задействовав бочки с динамитом"
+    },
+    {
+      "en": "Survive while Sun Bombs fall",
+      "ru": "Выживите под градом Солнечных бомб"
+    },
+    {
+      "en": "Survive without planting on Dave's mold colonies",
+      "ru": "Выживите, не сажая на колонии плесени Дейва"
+    },
+    {
+      "en": "Complete the level within <COUNTDOWN> seconds",
+      "ru": "Пройдите уровень за <COUNTDOWN> секунд"
+    },
+    {
+      "en": "Don't let the zombies trample the flowers",
+      "ru": "Не дайте зомби растоптать цветы"
+    },
+    {
+      "en": "Survive while evil potions boost zombies",
+      "ru": "Выживите, пока зловещие зелья усиливают зомби"
+    },
+    {
+      "en": "Survive the zombie attack with the given plants",
+      "ru": "Переживите атаку зомби с выданными растениями"
+    },
+    {
+      "en": "Match symbols to destroy the zombies",
+      "ru": "Совмещайте символы, чтобы уничтожать зомби"
+    },
+    {
+      "en": "Reach the target score",
+      "ru": "Наберите нужное количество очков"
+    },
+    {
+      "en": "Survive while Qigong Blackholes sweep your lawn",
+      "ru": "Выживите, пока чёрные дыры цигун проносятся по газону"
+    },
+    {
+      "en": "Deliver bowling balls to grind the zombies",
+      "ru": "Отправляйте шары для боулинга крушить зомби"
+    },
+    {
+      "en": "# Buttercup will throw butter when gnawed",
+      "ru": "# Лютик бросает масло, когда его грызут"
+    },
+    {
+      "en": "The escaperoot must survive",
+      "ru": "Корень-беглец должен выжить"
+    },
+    {
+      "en": "# Click on the Ice-shrooms to freeze the zombies",
+      "ru": "# Нажимайте на Ледогрибы, чтобы замораживать зомби"
+    },
+    {
+      "en": "# Freeze to stop the storm",
+      "ru": "# Замораживайте, чтобы остановить бурю"
+    },
+    {
+      "en": "Help Green Shadow defeat the horde",
+      "ru": "Помогите Зелёной Тени одолеть орду"
+    },
+    {
+      "en": "Green Shadow is stronger than normal Peashooters",
+      "ru": "Зелёная Тень сильнее обычных Горохострелов"
+    },
+    {
+      "en": "!! Boosted plants are only given once !!",
+      "ru": "!! Усиленные растения выдаются только один раз !!"
+    },
+    {
+      "en": "Help Grass Knuckles defeat the horde",
+      "ru": "Помогите Травяному Кулаку одолеть орду"
+    },
+    {
+      "en": "Boosted plants are only given once",
+      "ru": "Усиленные растения выдаются только один раз"
+    },
+    {
+      "en": "Protect at least 7 endangered plants",
+      "ru": "Защитите как минимум 7 растений под угрозой"
+    },
+    {
+      "en": "Survive against weaker zombies",
+      "ru": "Выживите против ослабленных зомби"
+    },
+    {
+      "en": "Thaw the ice trails with fire peas",
+      "ru": "Растопите ледяные дорожки огненными горошинами"
+    },
+    {
+      "en": "# Plants on Power Tiles trigger Plant Food automatically when the huge wave comes.",
+      "ru": "# Растения на Силовых клетках автоматически получают Подкормку при появлении огромной волны."
+    },
+    {
+      "en": "Break all the plant vases first!",
+      "ru": "Сначала разбейте все вазы с растениями!"
+    },
+    {
+      "en": "Survive while zombies come from the left",
+      "ru": "Выживите, пока зомби наступают слева"
+    },
+    {
+      "en": "# Use plants from the conveyor belt to fuse with Peashooters\n(only in this level)",
+      "ru": "# Соединяйте растения с конвейера с Горохострелами\n(только на этом уровне)"
+    },
+    {
+      "en": "# Use the shovel to reset the Peashooters' state",
+      "ru": "# Используйте лопату, чтобы сбросить состояние Горохострелов"
+    },
+    {
+      "en": "# Plant two plants together to create a new plant\n(only in this level)",
+      "ru": "# Соедините два растения, чтобы получить новое\n(только на этом уровне)"
+    },
+    {
+      "en": "Cook the chickens as much as possible outside the rails.",
+      "ru": "Старайтесь поджаривать зомби-кур за пределами рельсов."
+    },
+    {
+      "en": "# Plantern will make invisible zombies perceptible",
+      "ru": "# Фонарник делает невидимых зомби видимыми"
+    },
+    {
+      "en": "# Use plantfood for the Planterns to hide the surrounding plants",
+      "ru": "# Дайте Фонарнику Подкормку, чтобы скрыть окружающие растения"
+    },
+    {
+      "en": "# Use Planterns to illuminate the area covered in fog",
+      "ru": "# Используйте Фонарники, чтобы осветить затянутую туманом область"
+    },
+    {
+      "en": "Stun the zombies to stop the storms",
+      "ru": "Оглушайте зомби, чтобы остановить бури"
+    }
+  ],
+  "worlds": {
+    "Unknown World": "Неизвестный мир",
+    "Your House": "Ваш дом",
+    "Ancient Egypt": "Древний Египет",
+    "Pirate Seas": "Пиратские моря",
+    "Wild West": "Дикий Запад",
+    "Kongfu Temple": "Храм кунг-фу",
+    "Far Future": "Далёкое будущее",
+    "Dark Ages": "Тёмные века",
+    "Big Wave Beach": "Пляж большой волны",
+    "Frostbite Caves": "Ледяные пещеры",
+    "Lost City": "Затерянный город",
+    "Neon Mixtape Tour": "Неоновый микстейп-тур",
+    "Jurassic Marsh": "Юрское болото",
+    "Aerial Fortress": "Воздушная крепость",
+    "Modern Day": "Наши дни"
+  }
+}
