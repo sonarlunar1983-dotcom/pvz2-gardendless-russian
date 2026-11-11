@@ -6,6 +6,7 @@ import (
 	"bufio"
 	"bytes"
 	"crypto/rand"
+	_ "embed"
 	"encoding/base64"
 	"encoding/binary"
 	"encoding/json"
@@ -29,7 +30,8 @@ import (
 )
 
 const (
-	appTitle = "PvZ2 Gardendless — Font Fixer 1.0"
+	appTitle = "PvZ2 Gardendless — Font Fixer 1.41 (Garden RU)"
+	installerVersion = 46
 
 	IDC_GAME_PATH  = 1001
 	IDC_FONT       = 1003
@@ -316,161 +318,28 @@ func resetDefaults() {
 	applyConfigAsync(cfg)
 }
 
+//go:embed font-fix.js
+var installerJS string
+
+//go:embed ui-translations.json
+var uiTranslationsJSON string
+
+//go:embed font-assets.json
+var fontAssetsJSON string
+
+//go:embed objective-translations.json
+var objectiveTranslationsJSON string
+
+//go:embed document-translations.json
+var documentTranslationsJSON string
+
 func buildInstallerJS(cfg Config) string {
 	cfgJSON, _ := json.Marshal(cfg)
-	return fmt.Sprintf(`(() => {
-const incoming = %s;
-const VERSION = 5;
-if (window.__pvzRuFontFix && window.__pvzRuFontFix.version === VERSION && typeof window.__pvzRuFontFix.applyConfig === "function") {
-    window.__pvzRuFontFix.applyConfig(incoming);
-    return window.__pvzRuFontFix.getStats();
-}
-try {
-    if (window.__pvzRuFontFix && typeof window.__pvzRuFontFix.restoreAll === "function") {
-        window.__pvzRuFontFix.restoreAll();
-    }
-} catch (_) {}
-
-const CYR = /[А-Яа-яЁё]/;
-const KEY = "__pvzRuFontFixOriginal";
-const LAST = "__pvzRuFontFixLast";
-let config = incoming;
-let timer = null;
-let stats = { scanned: 0, matched: 0, changed: 0, href: location.href, error: "" };
-
-function labels() {
-    try {
-        if (typeof cc === "undefined" || !cc.director || !cc.Label) return [];
-        const scene = cc.director.getScene();
-        if (!scene || typeof scene.getComponentsInChildren !== "function") return [];
-        return scene.getComponentsInChildren(cc.Label) || [];
-    } catch (e) {
-        stats.error = String(e && e.message ? e.message : e);
-        return [];
-    }
-}
-
-function remember(label) {
-    if (!label[KEY]) {
-        label[KEY] = {
-            fontSize: label.fontSize,
-            lineHeight: label.lineHeight,
-            useSystemFont: label.useSystemFont,
-            fontFamily: label.fontFamily,
-            spacingX: label.spacingX
-        };
-        return;
-    }
-    const last = label[LAST];
-    if (last) {
-        if (typeof label.fontSize === "number" && label.fontSize !== last.fontSize) {
-            label[KEY].fontSize = label.fontSize;
-        }
-        if (typeof label.lineHeight === "number" && label.lineHeight !== last.lineHeight) {
-            label[KEY].lineHeight = label.lineHeight;
-        }
-    }
-}
-
-function restore(label) {
-    const base = label[KEY];
-    if (!base) return;
-    try {
-        label.fontSize = base.fontSize;
-        label.lineHeight = base.lineHeight;
-        label.useSystemFont = base.useSystemFont;
-        label.fontFamily = base.fontFamily;
-        label.spacingX = base.spacingX;
-        delete label[LAST];
-    } catch (_) {}
-}
-
-function matches(label) {
-    if (!config.onlyCyrillic) return true;
-    return CYR.test(String(label.string || ""));
-}
-
-function fix(label) {
-    if (!config.enabled || !matches(label)) {
-        restore(label);
-        return false;
-    }
-    try {
-        remember(label);
-        const base = label[KEY];
-        const newFont = Math.max(1, Math.round(Number(base.fontSize || label.fontSize || 1) * Number(config.fontScale || 1)));
-        const baseLine = Number(base.lineHeight || 0);
-        const newLine = baseLine > 0 ? Math.max(1, Math.round(baseLine * Number(config.lineHeightScale || 1))) : label.lineHeight;
-        const changed = label.useSystemFont !== true ||
-            String(label.fontFamily || "") !== String(config.fontFamily || "Segoe UI") ||
-            Number(label.spacingX || 0) !== Number(config.spacingX || 0) ||
-            Number(label.fontSize || 0) !== newFont ||
-            (baseLine > 0 && Number(label.lineHeight || 0) !== newLine);
-
-        label.useSystemFont = true;
-        label.fontFamily = String(config.fontFamily || "Segoe UI");
-        label.spacingX = Number(config.spacingX || 0);
-        label.fontSize = newFont;
-        if (baseLine > 0) label.lineHeight = newLine;
-        label[LAST] = { fontSize: label.fontSize, lineHeight: label.lineHeight };
-        return changed;
-    } catch (e) {
-        stats.error = String(e && e.message ? e.message : e);
-        return false;
-    }
-}
-
-function scan() {
-    const all = labels();
-    let matched = 0;
-    let changed = 0;
-    for (const label of all) {
-        if (config.enabled && matches(label)) matched++;
-        if (fix(label)) changed++;
-    }
-    stats = {
-        scanned: all.length,
-        matched,
-        changed,
-        href: location.href,
-        error: stats.error || ""
-    };
-    return Object.assign({}, stats);
-}
-
-function restartTimer() {
-    if (timer) clearInterval(timer);
-    timer = setInterval(scan, Math.max(50, Number(config.scanIntervalMs || 250)));
-}
-
-function applyConfig(next) {
-    config = Object.assign({}, config, next || {});
-    restartTimer();
-    return scan();
-}
-
-window.__pvzRuFontFix = {
-    version: VERSION,
-    applyConfig,
-    scan,
-    restoreAll() { for (const label of labels()) restore(label); },
-    getConfig() { return Object.assign({}, config); },
-    getStats() { return Object.assign({}, stats); }
-};
-
-try {
-    cc.director.on(cc.Director.EVENT_AFTER_SCENE_LAUNCH, () => {
-        setTimeout(scan, 0);
-        setTimeout(scan, 100);
-        setTimeout(scan, 500);
-    });
-} catch (_) {}
-
-restartTimer();
-const result = scan();
-console.log("[PvZ RU Font Fixer 1.0] installed", config, result);
-return result;
-})();`, string(cfgJSON))
+	js := strings.Replace(installerJS, "__CONFIG_JSON__", string(cfgJSON), 1)
+	js = strings.Replace(js, "__UI_TRANSLATIONS_JSON__", uiTranslationsJSON, 1)
+	js = strings.Replace(js, "__FONT_ASSETS_JSON__", fontAssetsJSON, 1)
+	js = strings.Replace(js, "__OBJECTIVE_TRANSLATIONS_JSON__", objectiveTranslationsJSON, 1)
+	return strings.Replace(js, "__DOCUMENT_TRANSLATIONS_JSON__", documentTranslationsJSON, 1)
 }
 
 type runtimeEvalResponse struct {
@@ -494,7 +363,7 @@ func evaluate(c *CDPClient, expression string) (runtimeEvalResponse, error) {
 	var out runtimeEvalResponse
 	err := c.SendCommand("Runtime.evaluate", map[string]any{
 		"expression":    expression,
-		"awaitPromise":  false,
+		"awaitPromise":  true,
 		"returnByValue": true,
 	}, &out)
 	if err != nil {
@@ -535,10 +404,10 @@ func injectAndVerify(c *CDPClient, cfg Config) (fontFixStats, error) {
 	}
 
 	// Verify that the object really exists in the page after installation.
-	verify, err := evaluate(c, `(() => {
-		if (!window.__pvzRuFontFix || window.__pvzRuFontFix.version !== 5) return null;
-		return window.__pvzRuFontFix.scan();
-	})()`)
+	verify, err := evaluate(c, fmt.Sprintf(`(() => {
+		if (!window.__pvzRuFontFix || window.__pvzRuFontFix.version !== %d) return null;
+		return Promise.resolve(window.__pvzRuFontFix.ready).then(() => window.__pvzRuFontFix.scan());
+	})()`, installerVersion))
 	if err != nil {
 		return fontFixStats{}, err
 	}
@@ -1053,7 +922,7 @@ func onCreate(hwnd syscall.Handle) {
 
 	createControl("STATIC", "Шрифт:", 0, 16, 82, 100, 20, hwnd, 0)
 	hFont = createControl("COMBOBOX", "", WS_BORDER|WS_TABSTOP|CBS_DROPDOWN|CBS_AUTOHSCROLL, 130, 78, 205, 300, hwnd, IDC_FONT)
-	for _, f := range []string{"Segoe UI", "Arial", "Trebuchet MS", "Tahoma", "Verdana", "Calibri"} {
+	for _, f := range []string{"Garden Auto RU", "Garden Note RU", "Garden Fright RU", "Garden Soft RU", "Segoe UI", "Arial", "Trebuchet MS", "Tahoma", "Verdana", "Calibri"} {
 		procSendMessageW.Call(uintptr(hFont), CB_ADDSTRING, 0, uintptr(unsafe.Pointer(utf16Ptr(f))))
 	}
 
