@@ -5,7 +5,7 @@
 Исходный перевод: https://github.com/KRUTONIK/pvz2-gardendless-russian
 
 Мод 1.3.1, Font Fixer 1.42, JS VERSION 47, собственные шрифты 0.5.
-Тег и GitHub Release не создаются без отдельного одобрения владельца.
+Публикация тега и GitHub Release одобрена владельцем. Выпуск: https://github.com/sonarlunar1983-dotcom/pvz2-gardendless-russian/releases/tag/v1.3.1-gardendless-0.16.27
 
 ## Изменения
 
