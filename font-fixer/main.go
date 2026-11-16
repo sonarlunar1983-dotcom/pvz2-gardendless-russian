@@ -30,8 +30,8 @@ import (
 )
 
 const (
-	appTitle = "PvZ2 Gardendless — Font Fixer 1.41 (Garden RU)"
-	installerVersion = 46
+	appTitle = "PvZ2 Gardendless — Font Fixer 1.42 (Garden RU)"
+	installerVersion = 47
 
 	IDC_GAME_PATH  = 1001
 	IDC_FONT       = 1003

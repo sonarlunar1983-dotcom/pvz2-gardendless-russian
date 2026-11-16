@@ -1,0 +1,197 @@
+{
+  "jsons/lang/lang.json#/GitHubLevelWindow/LevelNonExist": {
+    "en": "Level doesn't exist.",
+    "zh": "关卡文件不存在",
+    "ru": "Уровень не найден."
+  },
+  "jsons/lang/lang.json#/GitHubLevelWindow/LevelNotValid": {
+    "en": "Level data is not valid.",
+    "zh": "关卡数据无效",
+    "ru": "Некорректные данные уровня."
+  },
+  "jsons/lang/lang.json#/GitHubLevelWindow/LevelReadFailed": {
+    "en": "Reading Level failed.",
+    "zh": "读取关卡失败",
+    "ru": "Не удалось прочитать уровень."
+  },
+  "jsons/levels/sapfling6.json#/objects/1/objdata/Flow/2/Lines": {
+    "en": "Zombies are CHARGING towards our Sapflings!",
+    "zh": "僵尸正在全速冲向我们的树脂投手！",
+    "ru": "Зомби НЕСУТСЯ прямо к нашим Смоломётам!"
+  },
+  "jsons/levels/sapfling6.json#/objects/1/objdata/Flow/3/Lines": {
+    "en": "Worry not, User Dave. We have 2 solution for this: ",
+    "zh": "别担心，用户戴夫。我们有2种解决方案：",
+    "ru": "Не волнуйтесь, Пользователь Дейв. У нас есть два решения. "
+  },
+  "jsons/levels/sapfling6.json#/objects/1/objdata/Flow/4/Lines": {
+    "en": "1. Slow those zombies down by applying multiple kinds of debuffs",
+    "zh": "1. 使用多种减速手段使僵尸寸步难行",
+    "ru": "1. Замедлить зомби, сочетая разные ослабляющие эффекты."
+  },
+  "jsons/levels/sapfling6.json#/objects/1/objdata/Flow/5/Lines": {
+    "en": "2. Apply heavy firepower and kill the zombies before they could reach our Sapflings",
+    "zh": "2. 使用重火力压制，在僵尸撞到树脂投手前将其击杀",
+    "ru": "2. Обрушить на зомби мощный огонь и уничтожить их раньше, чем они доберутся до Смоломётов."
+  },
+  "jsons/levels/sapfling6.json#/objects/1/objdata/Flow/6/Lines": {
+    "en": "Why don't we do both at the same time?",
+    "zh": "要不咱们两招一起上呗？",
+    "ru": "А почему бы не сделать и то и другое?"
+  },
+  "jsons/levels/sapfling6.json#/objects/2/objdata/Flow/1/Lines": {
+    "en": "Slow zombies down and deal heavy damage! ",
+    "zh": "减速僵尸并造成巨额伤害！",
+    "ru": "Замедляйте зомби и наносите огромный урон! "
+  },
+  "jsons/levels/sapfling6.json#/objects/5/objdata/CardDecks/Recommended/0/Name": {
+    "en": "Opening Trap",
+    "zh": "开局陷阱",
+    "ru": "Ловушка на старте"
+  },
+  "jsons/levels/sapfling6.json#/objects/5/objdata/CardDecks/Recommended/2/Name": {
+    "en": "Over and Over",
+    "zh": "反反复复",
+    "ru": "Снова и снова"
+  },
+  "jsons/levels/sapfling6.json#/objects/5/objdata/CardDecks/Recommended/4/Name": {
+    "en": "Complement\nEach Other",
+    "zh": "取长补短",
+    "ru": "Дополняя\nдруг друга"
+  },
+  "jsons/levels/sapfling6.json#/objects/5/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Light and Heavy\nFire Force",
+    "zh": "轻重火力",
+    "ru": "Лёгкая и тяжёлая\nогневая мощь"
+  },
+  "jsons/objects/NarrativeList.json#/objects/0/objdata/Flow/2/Lines": {
+    "en": "These monks are really amazing!",
+    "zh": "这些武僧真是厉害！",
+    "ru": "Эти монахи и правда хороши!"
+  },
+  "jsons/objects/NarrativeList.json#/objects/0/objdata/Flow/3/Lines": {
+    "en": "More torches and nunchucks! We still can't get powerful plant partners from this time-space turbulence.",
+    "zh": "又是火棍和双节棍！我们还没办法从这时空乱流中拿到强力的植物伙伴！",
+    "ru": "Опять факелы и нунчаки! А из этой пространственно-временной кутерьмы нам всё ещё не удаётся вытащить сильных растительных союзников."
+  },
+  "jsons/objects/NarrativeList.json#/objects/0/objdata/Flow/4/Lines": {
+    "en": "Don't be discouraged, User Dave — where there's a will, there's a way!",
+    "zh": "不要沮丧，用户戴夫，天无绝人之路！",
+    "ru": "Не унывайте, Пользователь Дейв. Было бы желание, а выход найдётся!"
+  },
+  "jsons/objects/NarrativeList.json#/objects/0/objdata/Flow/5/Lines": {
+    "en": "Monks aren't good at holding their breath, and Tanglekelps can entangle them in the water cubes of Aqua Vines!",
+    "zh": "武僧们并不擅长憋气，水草可以把他们缠入水生藤蔓的水立方里。",
+    "ru": "Монахи плохо задерживают дыхание, а Спутывающие водоросли могут затянуть их в водяные кубы Водных лоз!"
+  },
+  "jsons/objects/NarrativeList.json#/objects/0/objdata/Flow/6/Lines": {
+    "en": "This way, we can make them lose their fighting ability!!",
+    "zh": "这样就可以让他们丧失战斗能力啦！",
+    "ru": "Так мы лишим их возможности сражаться!"
+  },
+  "jsons/objects/NarrativeList.json#/objects/0/objdata/Flow/7/Lines": {
+    "en": "Let those nunchucku-wielding monks who just stepped onto the field taste some 'watery' jelly!",
+    "zh": "让那些刚踏入场地的双截棍武僧们尝尝水果冻的滋味吧！",
+    "ru": "Пусть монахи с нунчаками, едва ступив на лужайку, попробуют наше водяное желе!"
+  },
+  "jsons/objects/NarrativeList.json#/objects/1/objdata/Flow/1/Lines": {
+    "en": "Well, a Watery Grave of sorts.",
+    "zh": "好吧，看来是某种意义上的水上坟墓。",
+    "ru": "Что ж, своего рода водяная могила."
+  },
+  "jsons/objects/NarrativeList.json#/objects/1/objdata/Flow/3/Lines": {
+    "en": "Penny, some of my old pals want to assist in this battle, but several can't be planted on Lily Pads due to their deep roots.",
+    "zh": "潘妮，我的一些老伙计想协助这场战斗，但他们中的一些深根扎入地底不能被种植在莲叶上。",
+    "ru": "Пенни, старые приятели хотят помочь в этой битве, но некоторых не посадишь на Кувшинки из-за их глубоких корней."
+  },
+  "jsons/objects/NarrativeList.json#/objects/1/objdata/Flow/4/Lines": {
+    "en": "Don't worry. This is no longer a problem, User Dave.",
+    "zh": "别为此担心，用户戴夫。",
+    "ru": "Не беспокойтесь, Пользователь Дейв. Теперь это решаемо."
+  },
+  "jsons/objects/NarrativeList.json#/objects/1/objdata/Flow/5/Lines": {
+    "en": "We know that plants with deep roots like Resistant Radishes cannot be planted on Lily Pads.",
+    "zh": "我们知道，像白萝卜这样的深根植物不能被种植在莲叶上。",
+    "ru": "Растения с глубокими корнями, например Стойкую редьку, нельзя сажать на Кувшинки."
+  },
+  "jsons/objects/NarrativeList.json#/objects/1/objdata/Flow/6/Lines": {
+    "en": "But Aqua Vines enable them to join in aquatic battle.",
+    "zh": "但水生藤蔓可以使他们也能参与水上作战。",
+    "ru": "Но Водные лозы позволяют им участвовать и в сражениях на воде."
+  },
+  "jsons/objects/NarrativeList.json#/objects/1/objdata/Flow/7/Lines": {
+    "en": "The same rule applies to our comrade!",
+    "zh": "对我们的老战友同样适用的规则！",
+    "ru": "Это относится и к нашему боевому товарищу!"
+  },
+  "jsons/objects/NarrativeList.json#/objects/2/objdata/Flow/1/Lines": {
+    "en": "Aqua Vine's Plant Food effect can push zombies back to the baseline.",
+    "zh": "水生藤蔓发动叶绿素效果可以把僵尸推至底线。",
+    "ru": "Усиление Водной лозы отбрасывает зомби к дальнему краю лужайки."
+  },
+  "jsons/objects/NarrativeList.json#/objects/3/objdata/Flow/2/Lines": {
+    "en": "Those annoying imps always piss me off!",
+    "zh": "这些小鬼可真够烦人的！",
+    "ru": "Эти надоедливые чертенята вечно выводят меня из себя!"
+  },
+  "jsons/objects/NarrativeList.json#/objects/3/objdata/Flow/3/Lines": {
+    "en": "They'd ruin everything you appreciate! Especially when there's a whole horde of them!",
+    "zh": "他们会吃掉你珍视的一切！尤其是当他们数量多起来后！",
+    "ru": "Они сгрызут всё, чем дорожишь! Особенно когда их набегает целая орда!"
+  },
+  "jsons/objects/NarrativeList.json#/objects/3/objdata/Flow/4/Lines": {
+    "en": "That is indeed a common concern, User Dave...",
+    "zh": "这样的顾虑的确很常见，用户戴夫……",
+    "ru": "Это и правда знакомая проблема, Пользователь Дейв…"
+  },
+  "jsons/objects/NarrativeList.json#/objects/3/objdata/Flow/5/Lines": {
+    "en": "I would personally suggest *PLANTING GUACODILES* in those Aqua Vines to eliminate some of the imps!",
+    "zh": "我建议「在水藤里种植鳄梨」以消灭这些恼人的小鬼僵尸",
+    "ru": "Я бы посоветовала *САЖАТЬ ГУАКОДИЛОВ* в Водные лозы, чтобы расправиться с частью чертенят!"
+  },
+  "jsons/objects/NarrativeList.json#/objects/4/objdata/Flow/1/Lines": {
+    "en": "*PLANT GUACODILES* in those endangered Aqua Vines to eliminate some of the imps!",
+    "zh": "「在水藤里种植鳄梨」以消灭这些恼人的小鬼僵尸！",
+    "ru": "*САЖАЙТЕ ГУАКОДИЛОВ* в Водные лозы под угрозой, чтобы расправиться с частью чертенят!"
+  },
+  "jsons/objects/NarrativeList.json#/objects/5/objdata/Flow/1/Lines": {
+    "en": "Lotorpedoes in water can deal with Parasol Zombies, while on land they can handle Excavator Zombies.",
+    "zh": "鱼雷莲蓬在水中可以对付阳伞僵尸，在陆地上可以解决发掘者僵尸。",
+    "ru": "В воде Лототорпеды справятся с зомби с зонтиками, а на суше — с зомби-землекопами."
+  },
+  "jsons/objects/NarrativeList.json#/objects/5/objdata/Flow/2/Lines": {
+    "en": "Notice: There is a limited supply of Aquatic Vines.",
+    "zh": "注意：水生藤蔓的数量有限。",
+    "ru": "Внимание! Запас Водных лоз ограничен."
+  },
+  "jsons/objects/NarrativeList.json#/objects/5/objdata/Flow/3/Lines": {
+    "en": "You can't cover everything — so take care of the most critical one first.",
+    "zh": "你不可能什么都顾得上——那就先顾最要紧的那个。",
+    "ru": "За всем не уследишь. Сначала позаботьтесь о самом важном."
+  },
+  "jsons/objects/NarrativeList.json#/objects/6/objdata/Flow/2/Lines": {
+    "en": "The information shows that there is an extreme shortage of water resources here.",
+    "zh": "信息显示这里极度缺乏水资源。",
+    "ru": "По имеющимся данным, воды здесь крайне мало."
+  },
+  "jsons/objects/NarrativeList.json#/objects/6/objdata/Flow/3/Lines": {
+    "en": "Without water, our plants can't reach their full potential!",
+    "zh": "没有水，我们的植物无法发挥全部的实力了！",
+    "ru": "Без воды наши растения не смогут показать всё, на что способны!"
+  },
+  "jsons/objects/NarrativeList.json#/objects/6/objdata/Flow/4/Lines": {
+    "en": "Don't worry.",
+    "zh": "不用担心。",
+    "ru": "Не беспокойтесь."
+  },
+  "jsons/objects/NarrativeList.json#/objects/6/objdata/Flow/5/Lines": {
+    "en": "If there's no water, we'll create water!",
+    "zh": "没有水，我们就创造水！",
+    "ru": "Если воды нет, мы её создадим!"
+  },
+  "jsons/levels/aquavine4.json#/objects/1/objdata/DescriptionsMultilanguage/0": {
+    "en": "You cannot plant plants on moltenpool",
+    "zh": "无法在 熔岩池 上种植植物",
+    "ru": "Нельзя сажать растения на лавовых озёрах"
+  }
+}

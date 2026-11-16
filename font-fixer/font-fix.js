@@ -1,6 +1,6 @@
 (() => {
     const incoming = __CONFIG_JSON__;
-    const VERSION = 46;
+    const VERSION = 47;
     const uiTranslations = __UI_TRANSLATIONS_JSON__;
     const fontAssets = __FONT_ASSETS_JSON__;
     const objectiveTranslations = __OBJECTIVE_TRANSLATIONS_JSON__;
@@ -23,6 +23,7 @@
     }
     function syncDocumentDialogs(russian) {
         if(typeof document==='undefined'||typeof document.querySelectorAll!=='function')return;
+        syncNativeDialogs(russian);
         for(const [frame,state] of documentStates){
             if(frame.isConnected===false){documentStates.delete(frame);continue;}
             if(!russian||frame.srcdoc!==state.translated)restoreDocument(frame,state);
@@ -46,7 +47,63 @@
     function observeDocumentDialogs() {
         if(documentObserver||typeof MutationObserver==='undefined'||typeof document==='undefined'||!document.body)return;
         documentObserver=new MutationObserver(()=>{if(!disposed)syncDocumentDialogs(config.enabled&&russianIsSelected());});
-        documentObserver.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['srcdoc']});
+        documentObserver.observe(document.body,{childList:true,characterData:true,subtree:true,attributes:true,attributeFilter:['srcdoc']});
+    }
+    const nativeStates = new Map();
+    const documentText = text => String(text).replace(/\s+/g,' ').trim();
+    function nativeValue(node,key,value) {
+        let state=nativeStates.get(node);
+        if(!state){state={};nativeStates.set(node,state);}
+        const read=()=>key==='text'?node.nodeValue:key==='html'?node.innerHTML:node.getAttribute(key);
+        const write=v=>{if(key==='text')node.nodeValue=v;else if(key==='html')node.innerHTML=v;else if(v===null)node.removeAttribute(key);else node.setAttribute(key,v);};
+        if(state[key]&&read()===state[key].translated)return;
+        state[key]={original:read(),translated:value,read,write};write(value);
+    }
+    function syncNativeDialogs(russian) {
+        for(const [node,state] of nativeStates){
+            if(node.isConnected===false){nativeStates.delete(node);continue;}
+            if(!russian){for(const item of Object.values(state))if(item.read()===item.translated)item.write(item.original);nativeStates.delete(node);}
+        }
+        if(!russian)return;
+        for(const dialog of document.querySelectorAll('dialog.game-dialog')){
+            if(!dialog.matches?.('dialog.game-dialog'))continue;
+            // Translate only built-in document bodies, never community descriptions.
+            for(const article of dialog.querySelectorAll(':scope > article.game-markdown')){
+                if(nativeStates.get(article)?.html)continue;
+                const translation=documentTranslations.find(item=>item.textSignatures?.includes(documentText(article.textContent)));
+                if(!translation)continue;
+                const error=article.querySelector('.game-dialog-error');
+                const originalIds=[...article.querySelectorAll('h1,h2,h3,h4,h5,h6')].map(node=>node.id);
+                const template=document.createElement('template');template.innerHTML=translation.html;
+                [...template.content.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach((node,i)=>{if(originalIds[i])node.id=originalIds[i];});
+                for(const table of template.content.querySelectorAll('table')){const wrapper=document.createElement('div');wrapper.className='game-markdown-table';wrapper.tabIndex=0;table.replaceWith(wrapper);wrapper.append(table);}
+                // Keep the actual status node used by the game's link error handler.
+                const originalHTML=article.innerHTML;
+                nativeValue(article,'html',template.innerHTML);
+                if(error)article.append(error);
+                nativeStates.get(article).html.original=originalHTML;
+                nativeStates.get(article).html.translated=article.innerHTML;
+                const state=nativeStates.get(article).html;
+                state.write=html=>{article.innerHTML=html;if(error){article.querySelector('.game-dialog-error')?.remove();article.append(error);}};
+                const title=dialog.querySelector('.game-dialog-header h2');
+                for(const node of title?.childNodes||[])if(node.nodeType===3&&node.nodeValue.trim())nativeValue(node,'text',translation.title);
+                nativeValue(dialog,'aria-label',translation.title);
+            }
+            const selectors='.game-dialog-header h2,.game-dialog-close,.game-dialog-status,.game-dialog-action,.game-github-tools button,.game-github-tools input,.game-github-breadcrumb,.game-github-breadcrumb > button:first-child,.game-github-record,.game-github-list button[data-play],.game-github-list button[data-more],.game-github-details > button,.game-music-toolbar button,.game-music-actions button,.game-music-status';
+            for(const element of dialog.querySelectorAll(selectors)){
+                for(const attr of ['aria-label','title','placeholder']){const value=element.getAttribute(attr);if(Object.hasOwn(uiTranslations,value))nativeValue(element,attr,uiTranslations[value]);}
+                for(const node of element.childNodes){if(node.nodeType!==3)continue;const value=node.nodeValue,trimmed=value.trim();if(Object.hasOwn(uiTranslations,trimmed))nativeValue(node,'text',value.replace(trimmed,()=>uiTranslations[trimmed]));}
+            }
+            // Metadata has dynamic values; leave authors, dates and pack IDs intact.
+            for(const element of dialog.querySelectorAll('.game-github-details > p:not(.game-github-path),.game-github > p[role="status"],.game-music-status')){
+                for(const node of element.childNodes){
+                    if(node.nodeType!==3)continue;
+                    const value=node.nodeValue;
+                    const translated=value.replace(/(^|\n)(Author|作者|Last played|上次游玩|Last cleared|上次通关|Imported|已导入): /g,(_,start,key)=>start+({Author:'Автор',作者:'Автор','Last played':'Последняя игра',上次游玩:'Последняя игра','Last cleared':'Последняя победа',上次通关:'Последняя победа',Imported:'Импортировано',已导入:'Импортировано'}[key])+': ').replace(/ · (Offline catalog|离线缓存目录)$/,' · Локальный каталог').replace(/^(Not played|尚未游玩)(?=\n|$)/,'Ещё не сыгран');
+                    if(translated!==value)nativeValue(node,'text',translated);
+                }
+            }
+        }
     }
     const objectiveRules = objectiveTranslations.templates.map(({en,ru}) => {
         const keys = [];
