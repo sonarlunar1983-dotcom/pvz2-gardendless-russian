@@ -1,9 +1,9 @@
-param([ValidateSet('0.16.1','0.16.15','0.16.27')][string]$Version = '0.16.27')
+param([ValidateSet('0.16.1','0.16.15','0.16.27','0.16.31')][string]$Version = '0.16.31')
 $ErrorActionPreference = 'Stop'
 $researchRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $go = Join-Path $researchRoot 'tools\go\bin\go.exe'
 $sourceRoot = Join-Path $researchRoot 'src\font-fixer'
-$output = Join-Path $researchRoot 'dist\PvZ2_Gardendless_Font_Fixer_1.42.exe'
+$output = Join-Path $researchRoot 'dist\PvZ2_Gardendless_Font_Fixer_1.43.exe'
 if (-not (Test-Path -LiteralPath $go)) { throw 'Expected verified portable Go 1.27.3 in tools\go.' }
 $env:GOCACHE = Join-Path $researchRoot 'tools\go-cache'
 $env:GOPATH = Join-Path $researchRoot 'tools\go-work'
@@ -13,6 +13,8 @@ Push-Location $researchRoot
 try {
     & node scripts\bundle-prototype-fonts.cjs
     if ($LASTEXITCODE -ne 0) { throw 'Prototype font bundling failed.' }
+    & node scripts\extract-native-ui-fixture.cjs
+    if ($LASTEXITCODE -ne 0) { throw 'Native UI extraction failed.' }
     & node scripts\bundle-game-documents.cjs
     if ($LASTEXITCODE -ne 0) { throw 'Game document bundling failed.' }
     & node scripts\sync-event-ui.cjs $Version

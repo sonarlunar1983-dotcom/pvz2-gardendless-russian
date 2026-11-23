@@ -3,12 +3,12 @@ const {pathToFileURL}=require('node:url');
 const assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
 const version=process.argv[2]||'0.15.0';
-assert(['0.15.0','0.16.1','0.16.15','0.16.27'].includes(version));
+assert(['0.15.0','0.16.1','0.16.15','0.16.27','0.16.31'].includes(version));
 (async()=>{
  const assets=path.join(root,'extracted-'+version,'assets');
  const loaders=fs.readdirSync(assets).filter(f=>/^pack-snapshot-.*\.js$/.test(f));assert.equal(loaders.length,1);
  let loader;
- if(version==='0.16.27'){
+ if(['0.16.27','0.16.31'].includes(version)){
   // The new loader imports unzip from the game bootstrap. Isolate it rather
   // than execute that bootstrap. Reuse the standalone fflate export shipped
   // in 0.16.15; snapshot/path/ZIP validation below remains the NEW loader's.

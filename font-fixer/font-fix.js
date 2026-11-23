@@ -1,6 +1,6 @@
 (() => {
     const incoming = __CONFIG_JSON__;
-    const VERSION = 47;
+    const VERSION = 48;
     const uiTranslations = __UI_TRANSLATIONS_JSON__;
     const fontAssets = __FONT_ASSETS_JSON__;
     const objectiveTranslations = __OBJECTIVE_TRANSLATIONS_JSON__;
@@ -54,8 +54,9 @@
     function nativeValue(node,key,value) {
         let state=nativeStates.get(node);
         if(!state){state={};nativeStates.set(node,state);}
-        const read=()=>key==='text'?node.nodeValue:key==='html'?node.innerHTML:node.getAttribute(key);
-        const write=v=>{if(key==='text')node.nodeValue=v;else if(key==='html')node.innerHTML=v;else if(v===null)node.removeAttribute(key);else node.setAttribute(key,v);};
+        const styleProperty=key==='fontFamily'||key==='fontStretch';
+        const read=()=>styleProperty?node.style[key]:key==='text'?node.nodeValue:key==='html'?node.innerHTML:node.getAttribute(key);
+        const write=v=>{if(styleProperty)node.style[key]=v;else if(key==='text')node.nodeValue=v;else if(key==='html')node.innerHTML=v;else if(v===null)node.removeAttribute(key);else node.setAttribute(key,v);};
         if(state[key]&&read()===state[key].translated)return;
         state[key]={original:read(),translated:value,read,write};write(value);
     }
@@ -67,6 +68,10 @@
         if(!russian)return;
         for(const dialog of document.querySelectorAll('dialog.game-dialog')){
             if(!dialog.matches?.('dialog.game-dialog'))continue;
+            // The new Game Default font has no Cyrillic cmap. Use a complete
+            // system face for DOM windows and restore only these properties.
+            nativeValue(dialog,'fontFamily','"Segoe UI", sans-serif');
+            nativeValue(dialog,'fontStretch','normal');
             // Translate only built-in document bodies, never community descriptions.
             for(const article of dialog.querySelectorAll(':scope > article.game-markdown')){
                 if(nativeStates.get(article)?.html)continue;
@@ -89,17 +94,19 @@
                 for(const node of title?.childNodes||[])if(node.nodeType===3&&node.nodeValue.trim())nativeValue(node,'text',translation.title);
                 nativeValue(dialog,'aria-label',translation.title);
             }
-            const selectors='.game-dialog-header h2,.game-dialog-close,.game-dialog-status,.game-dialog-action,.game-github-tools button,.game-github-tools input,.game-github-breadcrumb,.game-github-breadcrumb > button:first-child,.game-github-record,.game-github-list button[data-play],.game-github-list button[data-more],.game-github-details > button,.game-music-toolbar button,.game-music-actions button,.game-music-status';
+            const selectors='.game-dialog-header h2,.game-dialog-close,.game-dialog-status,.game-dialog-action,.game-github-header-actions button,.game-github-tools button,.game-github-tools input,.game-github-breadcrumb,.game-github-breadcrumb > button:first-child,.game-github-back,.game-github-record,.game-github-record > span,.game-github-placeholder,.game-github-info-label,.game-github-status,.game-github-list button[data-play],.game-github-list button[data-more],.game-github-details > button,.game-github-footer button,.game-music-toolbar button,.game-music-actions button,.game-music-status';
             for(const element of dialog.querySelectorAll(selectors)){
                 for(const attr of ['aria-label','title','placeholder']){const value=element.getAttribute(attr);if(Object.hasOwn(uiTranslations,value))nativeValue(element,attr,uiTranslations[value]);}
                 for(const node of element.childNodes){if(node.nodeType!==3)continue;const value=node.nodeValue,trimmed=value.trim();if(Object.hasOwn(uiTranslations,trimmed))nativeValue(node,'text',value.replace(trimmed,()=>uiTranslations[trimmed]));}
             }
             // Metadata has dynamic values; leave authors, dates and pack IDs intact.
-            for(const element of dialog.querySelectorAll('.game-github-details > p:not(.game-github-path),.game-github > p[role="status"],.game-music-status')){
+            for(const element of dialog.querySelectorAll('.game-github-details > p:not(.game-github-path),.game-github-info > p:not(.game-github-path),.game-github > p[role="status"],.game-music-status')){
                 for(const node of element.childNodes){
                     if(node.nodeType!==3)continue;
                     const value=node.nodeValue;
-                    const translated=value.replace(/(^|\n)(Author|作者|Last played|上次游玩|Last cleared|上次通关|Imported|已导入): /g,(_,start,key)=>start+({Author:'Автор',作者:'Автор','Last played':'Последняя игра',上次游玩:'Последняя игра','Last cleared':'Последняя победа',上次通关:'Последняя победа',Imported:'Импортировано',已导入:'Импортировано'}[key])+': ').replace(/ · (Offline catalog|离线缓存目录)$/,' · Локальный каталог').replace(/^(Not played|尚未游玩)(?=\n|$)/,'Ещё не сыгран');
+                    let translated=value.replace(/(^|\n)(Author|作者|Last played|Last Played|上次游玩|Last cleared|Last Victory|上次通关|Imported|已导入): /g,(_,start,key)=>start+({Author:'Автор',作者:'Автор','Last played':'Последняя игра','Last Played':'Последняя игра',上次游玩:'Последняя игра','Last cleared':'Последняя победа','Last Victory':'Последняя победа',上次通关:'Последняя победа',Imported:'Импортировано',已导入:'Импортировано'}[key])+': ').replace(/ · (Offline catalog|离线缓存目录)$/,' · Локальный каталог').replace(/^(Not played|尚未游玩)(?=\n|$)/,'Ещё не сыгран');
+                    if(/^(Last Played|Last Victory|上次游玩|上次通关): /.test(value))translated=translated.replace(/: (Never played|从未游玩|Not beaten|尚未通关|Cleared|已通关)$/,(match,text)=>': '+({'Never played':'Ещё не сыгран',从未游玩:'Ещё не сыгран','Not beaten':'Не пройден',尚未通关:'Не пройден',Cleared:'Пройден',已通关:'Пройден'}[text]));
+                    if(element.matches('.game-github-status'))translated=translated.replace(/^(Loading levels|正在加载关卡)(?= \()/,'Загрузка уровней').replace(/^(Ready|已就绪)(?= ·|$)/,'Готово');
                     if(translated!==value)nativeValue(node,'text',translated);
                 }
             }

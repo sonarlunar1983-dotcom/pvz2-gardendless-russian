@@ -1,9 +1,9 @@
-param([ValidateSet('0.15.0','0.16.1','0.16.15','0.16.27')][string]$Version = '0.15.0')
+param([ValidateSet('0.15.0','0.16.1','0.16.15','0.16.27','0.16.31')][string]$Version = '0.15.0')
 $ErrorActionPreference = 'Stop'
 $researchRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $bundleRoot = Join-Path $researchRoot ('build\bundle-' + $Version)
 $patchPath = Join-Path $researchRoot ('dist\PvZ2_Gardendless_Russian_' + $Version + '_preview.zip')
-$fontPath = if ($Version -eq '0.16.27') { Join-Path $researchRoot 'dist\PvZ2_Gardendless_Font_Fixer_1.42.exe' } elseif ($Version -eq '0.16.15') { Join-Path $researchRoot 'dist\PvZ2_Gardendless_Font_Fixer_1.41.exe' } elseif ($Version -eq '0.16.1') { Join-Path $researchRoot 'dist\PvZ2_Gardendless_Font_Fixer_1.35.exe' } else { Join-Path $researchRoot 'vendor\font-fixer-1.0\PvZ2_Gardendless_Font_Fixer_1.0.exe' }
+$fontPath = if ($Version -eq '0.16.31') { Join-Path $researchRoot 'dist\PvZ2_Gardendless_Font_Fixer_1.43.exe' } elseif ($Version -eq '0.16.27') { Join-Path $researchRoot 'dist\PvZ2_Gardendless_Font_Fixer_1.42.exe' } elseif ($Version -eq '0.16.15') { Join-Path $researchRoot 'dist\PvZ2_Gardendless_Font_Fixer_1.41.exe' } elseif ($Version -eq '0.16.1') { Join-Path $researchRoot 'dist\PvZ2_Gardendless_Font_Fixer_1.35.exe' } else { Join-Path $researchRoot 'vendor\font-fixer-1.0\PvZ2_Gardendless_Font_Fixer_1.0.exe' }
 $archivePath = Join-Path $researchRoot ('dist\PvZ2_Gardendless_Russian_' + $Version + '_with_Font_Fixer_preview.zip')
 $sevenZip = 'C:\Program Files\7-Zip\7z.exe'
 $fontHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $fontPath).Hash.ToLowerInvariant()

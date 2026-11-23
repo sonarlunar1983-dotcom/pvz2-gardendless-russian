@@ -1,4 +1,4 @@
-param([ValidateSet('0.15.0','0.16.1','0.16.15','0.16.27')][string]$Version = '0.15.0')
+param([ValidateSet('0.15.0','0.16.1','0.16.15','0.16.27','0.16.31')][string]$Version = '0.15.0')
 $ErrorActionPreference = 'Stop'
 $researchRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $packRoot = Join-Path $researchRoot ('build\pack-' + $Version)

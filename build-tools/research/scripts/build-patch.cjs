@@ -3,8 +3,8 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
 const version=process.argv[2]||'0.15.0';
-assert(['0.15.0','0.16.1','0.16.15','0.16.27'].includes(version),'Unsupported build target');
-const oldRoot = path.join(root, version==='0.16.27'?'build/pack-0.16.15':version==='0.15.0'?'ru-0.14.0':version==='0.16.15'?'build/pack-0.16.1':'build/pack-0.15.0');
+assert(['0.15.0','0.16.1','0.16.15','0.16.27','0.16.31'].includes(version),'Unsupported build target');
+const oldRoot = path.join(root, version==='0.16.31'?'build/pack-0.16.27':version==='0.16.27'?'build/pack-0.16.15':version==='0.15.0'?'ru-0.14.0':version==='0.16.15'?'build/pack-0.16.1':'build/pack-0.15.0');
 const baseRoot = path.join(root, 'base-'+version);
 const output = path.join(root, 'build', 'pack-'+version);
 const reportSuffix=version==='0.15.0'?'':'-'+version;
@@ -139,7 +139,7 @@ else {
     const dest=path.join(output,relative);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,JSON.stringify(data,null,2));
   }
   const manifest=read(path.join(oldRoot,'pack.json'));
-  Object.assign(manifest,{name:'Русификатор PvZ2 Gardendless '+version,version:version==='0.16.27'?'1.3.1':version==='0.15.0'?'1.1.0':version==='0.16.15'?'1.3.0':'1.2.3',gameVersion:version,description:'Русская локализация '+version+' на основе перевода KRUTONIK для 0.14.0. Пробная сборка.',author:'KRUTONIK (перевод 0.14.0); адаптация '+version});
+  Object.assign(manifest,{name:'Русификатор PvZ2 Gardendless '+version,version:version==='0.16.31'?'1.3.2':version==='0.16.27'?'1.3.1':version==='0.15.0'?'1.1.0':version==='0.16.15'?'1.3.0':'1.2.3',gameVersion:version,description:'Русская локализация '+version+' на основе перевода KRUTONIK для 0.14.0. Пробная сборка.',author:'KRUTONIK (перевод 0.14.0); адаптация '+version});
   fs.writeFileSync(path.join(output,'pack.json'),JSON.stringify(manifest,null,2));
   console.log(JSON.stringify({files:selected.length,translated:records.length,pending:0,output,methods:report.methods},null,2));
 }

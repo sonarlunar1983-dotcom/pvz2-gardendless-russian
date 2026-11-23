@@ -1,0 +1,332 @@
+{
+  "jsons/features/EventList.json#/EVENTS/Default/Levels/lod_299/Description": {
+    "en": "Get prepared for a HUGE ATTACK!",
+    "zh": "准备好迎接一场大袭击！",
+    "ru": "Приготовьтесь к МОЩНОЙ АТАКЕ!"
+  },
+  "jsons/features/EventList.json#/EVENTS/Default/Levels/lod_300/Description": {
+    "en": "Wear enough clothes!",
+    "zh": "穿好衣服！",
+    "ru": "Одевайтесь теплее!"
+  },
+  "jsons/features/EventList.json#/EVENTS/Default/Levels/lod_335/Description": {
+    "en": "Get prepared for a HUGE ATTACK!",
+    "zh": "不死法老降临！",
+    "ru": "Приготовьтесь к МОЩНОЙ АТАКЕ!"
+  },
+  "jsons/features/EventList.json#/EVENTS/Default/Levels/lod_339/Description": {
+    "en": "Weigh the pros and cons!",
+    "zh": "权衡利弊！",
+    "ru": "Взвесьте все за и против!"
+  },
+  "jsons/features/EventList.json#/EVENTS/Default/Levels/lod_349/Description": {
+    "en": "Invisi-war!",
+    "zh": "隐形战争！",
+    "ru": "Невидимая война!"
+  },
+  "jsons/features/EventList.json#/Valentines/Levels/lod_valentines_10/Description": {
+    "en": "You've only got these Hot Dates!",
+    "zh": "你只有这些热辣海枣了！",
+    "ru": "У вас есть только эти жгучие финики!"
+  },
+  "jsons/features/PlantFeatures.json#/PLANTS/235/NAME": {
+    "en": "Headbutter Lettuce",
+    "zh": "黄油生菜",
+    "ru": "Масляный салат"
+  },
+  "jsons/objects/PlantAlmanac.json#/objects/27/objdata/Introduction": {
+    "en": "Headbutter Lettuces bash zombies in front and behind while occasionally buttering zombies.",
+    "zh": "黄油生菜砸击前后的僵尸，有时候能用黄油糊住他们。",
+    "ru": "Масляный салат бьёт зомби перед собой и позади себя, иногда облепляя их маслом."
+  },
+  "jsons/objects/PlantAlmanac.json#/objects/27/objdata/Special/0/DESCRIPTION": {
+    "en": "has chance to fling butters",
+    "zh": "有机会丢出黄油",
+    "ru": "может бросить кусок масла"
+  },
+  "jsons/objects/PlantAlmanac.json#/objects/27/objdata/Chat": {
+    "en": "Headbutter Lettuce yawns. \"Oh, is it that time? Time to headbutt zombies? Let me put on my butting face and I'll be right out!\" He's a champ.",
+    "zh": "黄油生菜打哈欠道：“哦，现在吗？头槌僵尸？等我把头上的油抹顺滑了就来！”他真邋遢。",
+    "ru": "Масляный салат зевает. «О, уже пора? Пора бодать зомби? Сейчас сделаю грозное лицо и выйду!» Вот это боец."
+  },
+  "jsons/objects/PlantAlmanac.json#/objects/27/objdata/BriefIntroduction": {
+    "en": "Bashes and butters zombies",
+    "zh": "砸击并丢出黄油",
+    "ru": "Бьёт зомби и облепляет их маслом"
+  },
+  "jsons/levels/aquavine3.json#/objects/7/objdata/CardDecks/Recommended/1/Name": {
+    "en": "Steal the Spotlight",
+    "zh": "喧宾夺主",
+    "ru": "Перетянуть внимание"
+  },
+  "jsons/levels/aquavine3.json#/objects/7/objdata/CardDecks/Recommended/2/Name": {
+    "en": "Sailing on Wet Land",
+    "zh": "湿地行舟",
+    "ru": "Плавание по мокрой земле"
+  },
+  "jsons/levels/aquavine3.json#/objects/7/objdata/CardDecks/Challenging/0/Name": {
+    "en": "Deep Roots",
+    "zh": "深根",
+    "ru": "Глубокие корни"
+  },
+  "jsons/levels/aquavine3.json#/objects/7/objdata/CardDecks/Challenging/1/Name": {
+    "en": "Captain Sun-shroom",
+    "zh": "阳光菇船长",
+    "ru": "Капитан Солнцегриб"
+  },
+  "jsons/levels/lod_299.json#/objects/14/objdata/DescriptionsMultilanguage/0": {
+    "en": "Survive 240 seconds during zombie attack",
+    "zh": "在尸潮的进攻中存活240秒",
+    "ru": "Продержитесь 240 секунд под натиском зомби"
+  },
+  "jsons/levels/lod_299.json#/objects/20/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 180 SECONDS!",
+    "zh": "再坚持180秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 180 СЕКУНД!"
+  },
+  "jsons/levels/lod_299.json#/objects/21/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 120 SECONDS!",
+    "zh": "再坚持120秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 120 СЕКУНД!"
+  },
+  "jsons/levels/lod_299.json#/objects/22/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 60 SECONDS!",
+    "zh": "再坚持60秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 60 СЕКУНД!"
+  },
+  "jsons/levels/lod_299.json#/objects/23/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 30 SECONDS!",
+    "zh": "再坚持30秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 30 СЕКУНД!"
+  },
+  "jsons/levels/lod_299.json#/objects/24/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 10 SECONDS!",
+    "zh": "再坚持10秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 10 СЕКУНД!"
+  },
+  "jsons/levels/lod_304.json#/objects/3/objdata/DescriptionsMultilanguage/0": {
+    "en": "Fume-shroom has faster attack speed but lower damage.",
+    "zh": "大喷菇增加了攻速，削弱了伤害",
+    "ru": "Дымогриб атакует быстрее, но наносит меньше урона."
+  },
+  "jsons/levels/lod_319.json#/objects/1/objdata/Flow/1/Lines": {
+    "en": "When life gives you pineapple and coconuts.",
+    "zh": "当生活给了你菠萝和椰子。",
+    "ru": "Когда жизнь подкидывает ананасы и кокосы."
+  },
+  "jsons/levels/lod_319.json#/objects/1/objdata/Flow/2/Lines": {
+    "en": "Ask barrel roller zombies for some rum.",
+    "zh": "去和滚桶僵尸要点朗姆酒。",
+    "ru": "Попросите рома у зомби-бочкокатов."
+  },
+  "jsons/levels/lod_319.json#/objects/1/objdata/Flow/5/Lines": {
+    "en": "Almost forgot—you can block the hook with SPINAPPLE!",
+    "zh": "我差点忘了！你可以用旋转菠萝阻挡鱼钩！",
+    "ru": "Чуть не забыл: ШПИНАНАС может блокировать крюк!"
+  },
+  "jsons/levels/lod_319.json#/objects/2/objdata/Flow/1/Lines": {
+    "en": "SPINAPPLE can block the hook, I guess you already knew that.",
+    "zh": "旋转菠萝可以挡住鱼钩，我想你已经知道了。",
+    "ru": "ШПИНАНАС может блокировать крюк. Думаю, вы это уже знаете."
+  },
+  "jsons/levels/lod_321.json#/objects/8/objdata/DescriptionsMultilanguage/0": {
+    "en": "Survive 240 seconds during zombie attack",
+    "zh": "在尸潮的进攻中存活240秒",
+    "ru": "Продержитесь 240 секунд под натиском зомби"
+  },
+  "jsons/levels/lod_321.json#/objects/14/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 180 SECONDS!",
+    "zh": "再坚持180秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 180 СЕКУНД!"
+  },
+  "jsons/levels/lod_321.json#/objects/15/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 120 SECONDS!",
+    "zh": "再坚持120秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 120 СЕКУНД!"
+  },
+  "jsons/levels/lod_321.json#/objects/16/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 60 SECONDS!",
+    "zh": "再坚持60秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 60 СЕКУНД!"
+  },
+  "jsons/levels/lod_321.json#/objects/17/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 30 SECONDS!",
+    "zh": "再坚持30秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 30 СЕКУНД!"
+  },
+  "jsons/levels/lod_321.json#/objects/18/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 10 SECONDS!",
+    "zh": "再坚持10秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 10 СЕКУНД!"
+  },
+  "jsons/levels/lod_322.json#/objects/8/objdata/DescriptionsMultilanguage/0": {
+    "en": "Survive 210 seconds during zombie attack",
+    "zh": "在尸潮的进攻中存活210秒",
+    "ru": "Продержитесь 210 секунд под натиском зомби"
+  },
+  "jsons/levels/lod_322.json#/objects/13/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 150 SECONDS!",
+    "zh": "再坚持150秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 150 СЕКУНД!"
+  },
+  "jsons/levels/lod_322.json#/objects/14/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 90 SECONDS!",
+    "zh": "再坚持90秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 90 СЕКУНД!"
+  },
+  "jsons/levels/lod_322.json#/objects/15/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 30 SECONDS!",
+    "zh": "再坚持30秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 30 СЕКУНД!"
+  },
+  "jsons/levels/lod_322.json#/objects/16/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 10 SECONDS!",
+    "zh": "再坚持10秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 10 СЕКУНД!"
+  },
+  "jsons/levels/lod_323.json#/objects/8/objdata/DescriptionsMultilanguage/0": {
+    "en": "Survive 210 seconds during zombie attack",
+    "zh": "在尸潮的进攻中存活210秒",
+    "ru": "Продержитесь 210 секунд под натиском зомби"
+  },
+  "jsons/levels/lod_323.json#/objects/13/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 150 SECONDS!",
+    "zh": "再坚持150秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 150 СЕКУНД!"
+  },
+  "jsons/levels/lod_323.json#/objects/14/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 90 SECONDS!",
+    "zh": "再坚持90秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 90 СЕКУНД!"
+  },
+  "jsons/levels/lod_323.json#/objects/15/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 30 SECONDS!",
+    "zh": "再坚持30秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 30 СЕКУНД!"
+  },
+  "jsons/levels/lod_323.json#/objects/16/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 10 SECONDS!",
+    "zh": "再坚持10秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 10 СЕКУНД!"
+  },
+  "jsons/levels/lod_324.json#/objects/8/objdata/DescriptionsMultilanguage/0": {
+    "en": "Survive 240 seconds during zombie attack",
+    "zh": "在尸潮的进攻中存活240秒",
+    "ru": "Продержитесь 240 секунд под натиском зомби"
+  },
+  "jsons/levels/lod_324.json#/objects/14/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 180 SECONDS!",
+    "zh": "再坚持180秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 180 СЕКУНД!"
+  },
+  "jsons/levels/lod_324.json#/objects/15/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 120 SECONDS!",
+    "zh": "再坚持120秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 120 СЕКУНД!"
+  },
+  "jsons/levels/lod_324.json#/objects/16/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 60 SECONDS!",
+    "zh": "再坚持60秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 60 СЕКУНД!"
+  },
+  "jsons/levels/lod_324.json#/objects/17/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 30 SECONDS!",
+    "zh": "再坚持30秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 30 СЕКУНД!"
+  },
+  "jsons/levels/lod_324.json#/objects/18/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 10 SECONDS!",
+    "zh": "再坚持10秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 10 СЕКУНД!"
+  },
+  "jsons/levels/lod_335.json#/objects/37/objdata/StringMultiLanguage": {
+    "en": "\"The Undying Pharaoh\" is awakening!!!",
+    "zh": "“不死法老”正在苏醒！！！",
+    "ru": "«Бессмертный фараон» пробуждается!!!"
+  },
+  "jsons/levels/lod_335.json#/objects/54/objdata/StringMultiLanguage": {
+    "en": "\"The Undying Pharaoh\" has approached!!!",
+    "zh": "“不死法老”已抵达前院！！！",
+    "ru": "«Бессмертный фараон» уже здесь!!!"
+  },
+  "jsons/levels/lod_336.json#/objects/8/objdata/DescriptionsMultilanguage/0": {
+    "en": "Survive 270 seconds during zombie attack",
+    "zh": "在尸潮的进攻中存活270秒",
+    "ru": "Продержитесь 270 секунд под натиском зомби"
+  },
+  "jsons/levels/lod_336.json#/objects/14/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 210 SECONDS!",
+    "zh": "再坚持210秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 210 СЕКУНД!"
+  },
+  "jsons/levels/lod_336.json#/objects/15/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 150 SECONDS!",
+    "zh": "再坚持150秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 150 СЕКУНД!"
+  },
+  "jsons/levels/lod_336.json#/objects/16/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 90 SECONDS!",
+    "zh": "再坚持90秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 90 СЕКУНД!"
+  },
+  "jsons/levels/lod_336.json#/objects/17/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 30 SECONDS!",
+    "zh": "再坚持30秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 30 СЕКУНД!"
+  },
+  "jsons/levels/lod_336.json#/objects/18/objdata/StringMultiLanguage": {
+    "en": "SURVIVE FOR ANOTHER 10 SECONDS!",
+    "zh": "再坚持10秒！",
+    "ru": "ПРОДЕРЖИТЕСЬ ЕЩЁ 10 СЕКУНД!"
+  },
+  "jsons/levels/lod_338.json#/objects/2/objdata/DescriptionsMultilanguage/0": {
+    "en": "Pirate Barrels copy themselves when broken",
+    "zh": "木桶破碎时将复制自身",
+    "ru": "Пиратские бочки копируют себя при разрушении"
+  },
+  "jsons/levels/lod_338.json#/objects/2/objdata/DescriptionsMultilanguage/1": {
+    "en": "The Vases on the left contain 5 Blovers",
+    "zh": "左侧的罐子中有5株三叶草",
+    "ru": "В вазах слева находятся 5 ветродуев"
+  },
+  "jsons/levels/lod_feastivus_23.json#/objects/3/objdata/StringMultiLanguage": {
+    "en": "Merry Christmas",
+    "zh": "圣诞 快乐！",
+    "ru": "С Рождеством!"
+  },
+  "jsons/levels/lod_halloween_11.json#/objects/1/objdata/Flow/1/Lines": {
+    "en": "The lawn's got a curse on it!",
+    "zh": "草坪被下了诅咒！",
+    "ru": "На газон наложено проклятие!"
+  },
+  "jsons/levels/lod_halloween_11.json#/objects/1/objdata/Flow/2/Lines": {
+    "en": "You'd better leave those gravestones alone.",
+    "zh": "你最好不要碰那些墓碑。",
+    "ru": "Лучше не трогайте эти надгробия."
+  },
+  "jsons/levels/lod_halloween_11.json#/objects/1/objdata/Flow/3/Lines": {
+    "en": "And Shine Vine on Magnifying Grass? Trust me—NOT a good move!",
+    "zh": "另外，给棱镜草套上闪耀藤蔓可不是什么好主意！",
+    "ru": "А сияющая лоза на лупотраве? Поверьте, это ПЛОХАЯ идея!"
+  },
+  "jsons/levels/lod_halloween_11.json#/objects/2/objdata/Flow/1/Lines": {
+    "en": "The lawn's got a curse on it!",
+    "zh": "草坪被下了诅咒！",
+    "ru": "На газон наложено проклятие!"
+  },
+  "jsons/levels/lod_halloween_11.json#/objects/2/objdata/Flow/2/Lines": {
+    "en": "You'd better leave those gravestones alone.",
+    "zh": "你最好不要碰那些墓碑。",
+    "ru": "Лучше не трогайте эти надгробия."
+  },
+  "jsons/levels/lod_halloween_11.json#/objects/2/objdata/Flow/3/Lines": {
+    "en": "And Shine Vine on Magnifying Grass? Trust me—NOT a good move!",
+    "zh": "另外，给棱镜草套上闪耀藤蔓可不是什么好主意！",
+    "ru": "А сияющая лоза на лупотраве? Поверьте, это ПЛОХАЯ идея!"
+  },
+  "jsons/levels/lod_halloween_12.json#/objects/2/objdata/DescriptionsMultilanguage/0": {
+    "en": "Feed all the edible zombies to Snap Pea!",
+    "zh": "将所有能吃得下的僵尸投喂给大嘴豌豆！",
+    "ru": "Скормите кусачему гороху всех зомби, которых он может проглотить!"
+  }
+}

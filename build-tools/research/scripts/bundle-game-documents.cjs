@@ -21,15 +21,18 @@ async function bundle(){
  const browser=await chromium.launch({headless:true});
  try {
   const page=await browser.newPage();
-  for(const name of ['about','update']){
-   const html=fs.readFileSync(path.join(fork,'localization/0.16.27/documents',name+'.ru.html'),'utf8');
+  for(const version of ['0.16.27','0.16.31'])for(const name of ['about','update']){
+   const html=fs.readFileSync(path.join(fork,'localization/'+version+'/documents',name+'.ru.html'),'utf8');
    assert(!/<script|\son\w+\s*=|javascript:/i.test(html));
-   const sources=['en','zh'].map(language=>fs.readFileSync(path.join(root,'extracted-0.16.27/docs',name+'.'+language+'.md'),'utf8'));
+   const sources=['en','zh'].map(language=>fs.readFileSync(path.join(root,'extracted-'+version+'/docs',name+'.'+language+'.md'),'utf8'));
    const textSignatures=[];
-   for(const source of sources)textSignatures.push(await page.evaluate(html=>{const node=document.createElement('article');node.innerHTML=html;return node.textContent.replace(/\s+/g,' ').trim();},marked.parse(source,{gfm:true})));
+   if(version==='0.16.31')await page.evaluate(fs.readFileSync(path.join(root,'build/native-fixture-0.16.31.js'),'utf8'));
+   for(const source of sources)textSignatures.push(await page.evaluate(({html,source,current})=>{const node=document.createElement('article');node.innerHTML=current?window.renderMarkdown(source):html;return node.textContent.replace(/\s+/g,' ').trim();},{html:marked.parse(source,{gfm:true}),source,current:version==='0.16.31'}));
    const authors=s=>[...s.matchAll(/class="author">([^<]+)</g)].map(m=>m[1]).sort();
    if(name==='about')assert.deepEqual(authors(html),authors(sources[0]));
-   documents.push({name,version:'0.16.27',title:name==='about'?'Об игре':'Обновления',html,sources,textSignatures,sourceSha256:sources.map(s=>crypto.createHash('sha256').update(s).digest('hex'))});
+   const links=s=>[...s.matchAll(/href="([^"]+)"/g)].map(m=>m[1]).sort();
+   assert.deepEqual(links(html),links(sources[0]),'Document links changed');
+   documents.push({name,version,title:name==='about'?'Об игре':'Обновления',html,sources,textSignatures,sourceSha256:sources.map(s=>crypto.createHash('sha256').update(s).digest('hex'))});
   }
  }finally{await browser.close();}
  fs.writeFileSync(path.join(root,'src/font-fixer/document-translations.json'),JSON.stringify(documents,null,2));

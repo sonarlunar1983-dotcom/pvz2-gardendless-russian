@@ -3,7 +3,7 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
 const version=process.argv[2]||'0.16.1';
-assert(['0.16.1','0.16.15','0.16.27'].includes(version));
+assert(['0.16.1','0.16.15','0.16.27','0.16.31'].includes(version));
 const read = p => JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const prefab = read('extracted-0.16.1/assets/resources/import/0d/0de92d8b4.json');
 let source;

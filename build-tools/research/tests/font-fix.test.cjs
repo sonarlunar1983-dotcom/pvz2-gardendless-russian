@@ -111,7 +111,7 @@ test('document observer translates newly opened dialogs and disconnects on dispo
  observerCallback();assert.equal(fixture.frame.srcdoc,fixture.original);
 });
 
-test('0.16.15 music pack caption translates synchronously and follows language changes',{skip:!['0.16.15','0.16.27'].includes(targetVersion)},()=>{
+test('0.16.15 music pack caption translates synchronously and follows language changes',{skip:!['0.16.15','0.16.27','0.16.31'].includes(targetVersion)},()=>{
  const env=setup();env.language.code='ru';env.run(newSource);
  env.plain.string='Music Packs';assert.equal(env.plain.string,'Музыкальные наборы');
  env.language.code='en';env.plain.string='Music Packs';assert.equal(env.plain.string,'Music Packs');
@@ -119,14 +119,14 @@ test('0.16.15 music pack caption translates synchronously and follows language c
  env.context.window.__pvzRuFontFix.applyConfig({enabled:false});assert.equal(env.plain.string,'Music Packs');
 });
 
-test('0.16.15 retains the game classes and serialized fields used by the helper',{skip:!['0.16.15','0.16.27'].includes(targetVersion)},()=>{
+test('0.16.15 retains the game classes and serialized fields used by the helper',{skip:!['0.16.15','0.16.27','0.16.31'].includes(targetVersion)},()=>{
  const source=fs.readFileSync(path.join(root,'extracted-'+targetVersion+'/assets/main/index.js'),'utf8');
  const moduleSource=name=>{const start=source.indexOf('System.register("chunks:///_virtual/'+name+'.ts"');assert(start>=0,name);const end=source.indexOf('System.register(',start+1);return source.slice(start,end<0?source.length:end);};
  for(const [name,fields] of Object.entries({CardDeckDisplayer:['description_label','title_label'],LevelOfTheDayDisplayer:['today_left_time','next_try_time','description','title'],SettingWindow:['tooltips','SquareTipMode','PocketUI','MusicPacks'],MultiLanguage:['getString']})){
   const text=moduleSource(name);for(const field of fields)assert(text.includes(field),name+'.'+field);
  }
  const engine=path.join(root,'extracted-'+targetVersion+'/cocos-js/_virtual_cc-937a2166.js');
- assert.deepEqual(fs.readFileSync(engine),fs.readFileSync(path.join(root,'extracted-0.16.1/cocos-js/_virtual_cc-937a2166.js')));
+ assert.equal(fs.readFileSync(engine,'utf8').replace(/\r\n/g,'\n'),fs.readFileSync(path.join(root,'extracted-0.16.1/cocos-js/_virtual_cc-937a2166.js'),'utf8').replace(/\r\n/g,'\n'));
 });
 
 test('Card deck description moves right five steps and down one and a half without drifting or moving its title',()=>{
@@ -400,7 +400,7 @@ function attachComponent(env,name,component,labels){
 }
 
 test('all known objective templates translate in pause and introduction, preserving substitutions',()=>{
- assert.equal(objectiveTranslations.templates.length,targetVersion==='0.16.27'?48:47);
+ assert.equal(objectiveTranslations.templates.length,targetVersion==='0.16.31'?55:targetVersion==='0.16.27'?48:47);
  for(const screen of ['PauseScreen','LevelObjectiveScreen']){
   const env=setup();env.language.code='ru';attachComponent(env,screen,{},[env.plain]);env.run(newSource);
   for(const {en,ru} of objectiveTranslations.templates){
@@ -749,7 +749,7 @@ test('all EventList captions have their existing Russian translations at runtime
  function visit(v){if(!v||typeof v!=='object')return;if(typeof v.en==='string'&&typeof v.ru==='string'){
   env.plain.string=v.en;env.context.window.__pvzRuFontFix.scan();assert.equal(env.plain.string,v.ru);count++;
  }for(const c of Object.values(v))visit(c);}
- visit(events);assert.equal(count,73);
+ visit(events);assert.equal(count,targetVersion==='0.16.31'?80:73);
 });
 test('Pinata and ticket timer units become Russian without changing numeric values',()=>{
  const env=setup();env.language.code='ru';env.run(newSource);

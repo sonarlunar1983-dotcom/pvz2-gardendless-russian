@@ -4,12 +4,22 @@ const fs=require('node:fs');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const version=process.env.PATCH_VERSION||'0.15.0';
-const expected={'0.15.0':{files:285,texts:7215,packVersion:'1.1.0'},'0.16.1':{files:281,texts:7284,packVersion:'1.2.3'},'0.16.15':{files:307,texts:7529,packVersion:'1.3.0'},'0.16.27':{files:308,texts:7566,packVersion:'1.3.1'}}[version];
+const expected={'0.15.0':{files:285,texts:7215,packVersion:'1.1.0'},'0.16.1':{files:281,texts:7284,packVersion:'1.2.3'},'0.16.15':{files:307,texts:7529,packVersion:'1.3.0'},'0.16.27':{files:308,texts:7566,packVersion:'1.3.1'},'0.16.31':{files:322,texts:7638,packVersion:'1.3.2'}}[version];
 assert(expected,'Unknown test target');
 const output=path.join(root,'build/pack-'+version);
 const read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
 const files=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?files(path.join(dir,e.name)):[path.join(dir,e.name)]);
 const dataFiles=files(output).filter(f=>path.basename(f)!=='pack.json');
+test('0.16.31 includes the new plant and current survival objectives without reverting the imp balance change',{skip:version!=='0.16.31'},()=>{
+ const plant=read(path.join(output,'jsons/features/PlantFeatures.json')).PLANTS.find(p=>p.CODENAME==='headbutter');
+ assert.equal(plant.NAME.ru,'Масляный салат');
+ const almanac=read(path.join(output,'jsons/objects/PlantAlmanac.json')).objects.find(o=>o.aliases?.includes('headbutter'));
+ assert(almanac.objdata.Introduction.ru.includes('позади'));
+ const imp=read(path.join(output,'jsons/objects/ZombieAlmanac.json')).objects.find(o=>o.aliases?.includes('kongfu_rocket_imp'));
+ assert.equal(imp.objdata.Elements[0].SORT.en,'Fragile');assert.equal(imp.objdata.Elements[0].PROGRESS,0.2);
+ const survival=[];texts(read(path.join(output,'jsons/levels/lod_299.json')),node=>{if(node.en?.includes('SURVIVE FOR ANOTHER'))survival.push(node);});
+ assert.equal(survival.length,5);for(const node of survival)assert.deepEqual(node.ru.match(/\d+/g),node.en.match(/\d+/g));
+});
 function strip(v){if(Array.isArray(v))return v.map(strip);if(v&&typeof v==='object')return Object.fromEntries(Object.entries(v).filter(([k])=>k!=='ru'&&k!=='_languages').map(([k,c])=>[k,strip(c)]));return v;}
 function texts(v,visit,p=''){if(!v||typeof v!=='object')return;if(!Array.isArray(v)&&['en','zh','ru'].some(k=>typeof v[k]==='string')){visit(v,p);return;}for(const [k,c] of Object.entries(v))if(k!=='_languages')texts(c,visit,p+'/'+k);}
 test('every packaged data file preserves all target-version data and array order',()=>{
@@ -63,7 +73,7 @@ test('FPS caption and zombie descriptors use the requested wording in their own 
   if(groups[element.TYPE])groups[element.TYPE].set(element.SORT.ru,(groups[element.TYPE].get(element.SORT.ru)||0)+1);
  }
  for(const [value,count] of Object.entries({'Медленная':6,'Быстрая':62,'Огромная':14,'Обычная':107}))assert.equal(groups.SPEED.get(value),count,value);
- for(const [value,count] of Object.entries({'Огромная':13,'Низкая':51,'Почти высокая':54,'Высокая':25,'Выше средней':71,'Бессмертный':13,'Бессмертный, низкий':1,'Чрезвычайно огромная':4}))assert.equal(groups.TOUGHNESS.get(value),count,value);
+ for(const [value,count] of Object.entries({'Огромная':13,'Низкая':version==='0.16.31'?50:51,'Почти высокая':54,'Высокая':25,'Выше средней':71,'Бессмертный':13,'Бессмертный, низкий':1,'Чрезвычайно огромная':4}))assert.equal(groups.TOUGHNESS.get(value),count,value);
  for(const value of ['Ползучий','Голодный','Бешеный','Обычный'])assert(!groups.SPEED.has(value));
  for(const value of ['Огромный','Средний','Защищённый','Механизированный','Плотный','Закалённый','Прочный','Неумирающий'])assert(!groups.TOUGHNESS.has(value));
  assert.equal(groups.SPEED.get('Быстрый'),24);assert.equal(groups.SPEED.get('Медлительный'),16);
@@ -77,7 +87,7 @@ test('new hybrids, new quest and formerly omitted vase instruction are translate
  const lang=read(path.join(output,'jsons/lang/lang.json'));assert(lang.LoadingTips.some(t=>t.ru.includes('вместе')));
 });
 
-test('0.16.15 translates new plants, music packs and decks while preserving reordered tips',{skip:!['0.16.15','0.16.27'].includes(version)},()=>{
+test('0.16.15 translates new plants, music packs and decks while preserving reordered tips',{skip:!['0.16.15','0.16.27','0.16.31'].includes(version)},()=>{
  const lang=read(path.join(output,'jsons/lang/lang.json'));
  const previous=read(path.join(root,'build/pack-0.16.1/jsons/lang/lang.json'));
  assert.equal(lang.SettingLyrics.MusicPacks.ru,'Музыкальные наборы');
@@ -88,7 +98,7 @@ test('0.16.15 translates new plants, music packs and decks while preserving reor
  }
  assert(lang.LoadingTips.at(-1).ru.includes('Shift + F8'));
  const plants=read(path.join(output,'jsons/features/PlantFeatures.json')).PLANTS;
- assert.equal(plants.length,235);
+ assert.equal(plants.length,version==='0.16.31'?236:235);
  assert.equal(plants.find(p=>p.CODENAME==='aquavine').NAME.ru,'Водная лоза');
  assert.equal(plants.find(p=>p.CODENAME==='buduhboom').NAME.ru,'Маслобум');
  const current=read(path.join(output,'jsons/levels/reinforce7.json'));

@@ -1,10 +1,11 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
 const version=process.argv[2]||'0.16.1';
-assert(['0.16.1','0.16.15','0.16.27'].includes(version));
+assert(['0.16.1','0.16.15','0.16.27','0.16.31'].includes(version));
 const core=JSON.parse(fs.readFileSync(path.join(root,'assets/ui-translations-0.16.1.json'),'utf8'));
-if(['0.16.15','0.16.27'].includes(version))Object.assign(core,JSON.parse(fs.readFileSync(path.join(root,'assets/ui-translations-0.16.15.json'),'utf8')));
-if(version==='0.16.27')Object.assign(core,JSON.parse(fs.readFileSync(path.join(root,'assets/ui-translations-0.16.27.json'),'utf8')));
+if(['0.16.15','0.16.27','0.16.31'].includes(version))Object.assign(core,JSON.parse(fs.readFileSync(path.join(root,'assets/ui-translations-0.16.15.json'),'utf8')));
+if(['0.16.27','0.16.31'].includes(version))Object.assign(core,JSON.parse(fs.readFileSync(path.join(root,'assets/ui-translations-0.16.27.json'),'utf8')));
+if(version==='0.16.31')Object.assign(core,JSON.parse(fs.readFileSync(path.join(root,'assets/ui-translations-0.16.31.json'),'utf8')));
 const events=JSON.parse(fs.readFileSync(path.join(root,'build/pack-'+version+'/jsons/features/EventList.json'),'utf8'));
 const values=new Map();let nodes=0;
 function visit(v){if(!v||typeof v!=='object')return;if(typeof v.en==='string'&&typeof v.ru==='string'){

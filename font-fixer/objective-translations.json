@@ -157,8 +157,36 @@
       "ru": "Сначала разбейте все вазы с растениями!"
     },
     {
+      "en": "Survive 240 seconds during zombie attack",
+      "ru": "Продержитесь 240 секунд под натиском зомби"
+    },
+    {
+      "en": "Fume-shroom has faster attack speed but lower damage.",
+      "ru": "Дымогриб атакует быстрее, но наносит меньше урона."
+    },
+    {
+      "en": "Survive 210 seconds during zombie attack",
+      "ru": "Продержитесь 210 секунд под натиском зомби"
+    },
+    {
+      "en": "Survive 270 seconds during zombie attack",
+      "ru": "Продержитесь 270 секунд под натиском зомби"
+    },
+    {
+      "en": "Pirate Barrels copy themselves when broken",
+      "ru": "Пиратские бочки копируют себя при разрушении"
+    },
+    {
+      "en": "The Vases on the left contain 5 Blovers",
+      "ru": "В вазах слева находятся 5 ветродуев"
+    },
+    {
       "en": "Survive while zombies come from the left",
       "ru": "Выживите, пока зомби наступают слева"
+    },
+    {
+      "en": "Feed all the edible zombies to Snap Pea!",
+      "ru": "Скормите кусачему гороху всех зомби, которых он может проглотить!"
     },
     {
       "en": "# Use plants from the conveyor belt to fuse with Peashooters\n(only in this level)",
