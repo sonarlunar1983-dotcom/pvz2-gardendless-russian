@@ -4,7 +4,7 @@
 
 Исходный перевод: https://github.com/KRUTONIK/pvz2-gardendless-russian
 
-Мод **1.3.2**, Font Fixer **1.43**, JS VERSION **48**, шрифты **0.5**. Рабочая ветка `localization/0.16.31`. Тег и GitHub Release не создаются без отдельного одобрения владельца.
+Мод **1.3.2**, Font Fixer **1.43**, JS VERSION **48**, шрифты **0.5**. Рабочая ветка `localization/0.16.31`. Пользователь проверил сборку и явно одобрил публикацию. Выпуск: https://github.com/sonarlunar1983-dotcom/pvz2-gardendless-russian/releases/tag/v1.3.2-gardendless-0.16.31
 
 ## Что изменилось относительно 0.16.27
 
